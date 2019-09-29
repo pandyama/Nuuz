@@ -4,12 +4,12 @@ import 'model.dart';
 
 Future<List<news>> getNews(String country) async {
 
-  final String url = 'https://newsapi.org/v2/top-headlines?country=ca&apiKey=b4949cc19bc54bc2a86e0b16e512329e';
+  final String url = 'https://newsapi.org/v2/top-headlines?country=ca&apiKey=API_KEY';
 
   final client = new http.Client();
   final streamedRest = await client.send(http.Request('get', Uri.parse(url)));
   final response = await http.get(Uri.parse(
-      'https://newsapi.org/v2/top-headlines?country=$country&apiKey=b4949cc19bc54bc2a86e0b16e512329e'),
+      'https://newsapi.org/v2/top-headlines?country=$country&apiKey=API_KEY'),
       headers: {"Accept": "application/json"});
 
   var res1 = jsonDecode(response.body);
