@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'international.dart';
 import 'canada.dart';
-import 'sliver.dart';
-import 'main.dart';
+
 
 
 void main()=> runApp(MaterialApp(home: BottomNavBar()));
@@ -20,7 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar>{
 
   final pageOption =<Widget> [
     international(),
-    Canada()
+    Canada(),
   ];
 
   @override
@@ -31,39 +30,21 @@ class _BottomNavBarState extends State<BottomNavBar>{
         index: 0,
         height: 50.0,
         items: <Widget>[
-          Icon(Icons.home, size: 30),
-          Icon(Icons.flag, size: 30),
-          Icon(Icons.flag, size: 30)
+          Icon(Icons.account_balance, size: 30),
+          Icon(Icons.ac_unit, size: 30),
         ],
         color: Colors.white,
         buttonBackgroundColor: Colors.white,
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.orange,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 300),
         onTap: (index){
 
-         // if(index == 1){
           setState((){
             _page = index;
-            //navBarState.setPage(1);
-//            Navigator.push(
-//              context,
-//              MaterialPageRoute(builder: (context) => international()),
-//            );
+
           });
-         // changePage();
-          //}
-//          if(index == 2){
-//            setState((){
-//              _page = index;
-//
-//            });
-////            Navigator.push(
-////              context,
-////              MaterialPageRoute(builder: (context) => sliver()),
-////            );
-//          changePage();
-//          }
+
         },
       ),
       body: pageOption[_page],
@@ -77,8 +58,7 @@ class _BottomNavBarState extends State<BottomNavBar>{
         context,
         MaterialPageRoute(builder: (context) => international()),
       );
-//      final CurvedNavigationBarState navBarState = _bottomNavigationKey.currentState;
-//      navBarState.setPage(1);
+
     }
   }
 
