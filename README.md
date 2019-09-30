@@ -1,10 +1,12 @@
-# newsfeed
+# Nuuz
 
-A new Flutter application.
+A Simplified news app build purely with Flutter and Dart
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- News headlines shown as card widgets
+- Clicking on the card takes you to the Original Article
+- Integrated open source REST API with Dart and displaying content thru Flutter
 
 Screenshot below: 
 
