@@ -2,13 +2,10 @@
 
 A Simplified news app build purely with Flutter and Dart
 
-https://play.google.com/store/apps/details?id=com.mp.nuuz
-
 ## Getting Started
 
 - News headlines shown as card widgets
 - Clicking on the card takes you to the Original Article
-- Integrated open source REST API with Dart and displaying content thru Flutter
 
 Screenshot below: 
 
